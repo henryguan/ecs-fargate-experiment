@@ -3,16 +3,16 @@ Simple webserver in golang, to demonstrate basic functionalities like e.g. sendi
 
 ### what does it do?
 
-This container starts a webserver on port 8000 and returns back 
+This container starts a webserver on port 8000(/6000) and returns back 
 - some header information
 - the local ip address of the container
 - the message provided by environment variable called _message_  
 
 ### usage
 
-to start _simplehttp_ web server , map local port 8000 into container and provide the env variable **message**:  
+to start _simplehttp_ web server , map local port 8000(/6000) into container and provide the env variable **message**:  
 ```bash
-sudo docker run -e message=Hello -p 8000:8000 gkoenig/simplehttp
+sudo docker run -e message=Hello -p 8000:8000(6000:6000) gkoenig/simplehttp
 ```  
 
 output from above call (your IP address will vary):  
